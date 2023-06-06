@@ -1,5 +1,6 @@
 import { Roboto } from 'next/font/google';
 import type { AppProps } from 'next/app';
+import Image from 'next/image';
 import { globalStyles } from '../styles/global';
 import logoImg from "../assets/logo.svg"
 import { Container, Header } from "../styles/pages/app"
@@ -22,7 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
       `}</style>
       <Container>
         <Header>
-          <img src={logoImg.src} alt="" />
+          <Image width={130} height={52} src={logoImg.src} alt="" />
         </Header>
 
         <Component {...pageProps} />
